@@ -1,22 +1,21 @@
 pipeline {
     agent any
-    Tools {
+    tools {
         maven "MAVEN3"
     }
-    satges {
+    stages {
         stage("Fetch code") {
             steps {
-                git branch:"vp-rem" url:"https://github.com/devopshydclub/vprofile-repo.git"
+                git branch: "vp-rem" , url: "https://github.com/devopshydclub/vprofile-repo.git"
             }
         }
-        satge("Build") {
+        stage("Build") {
             steps {
                 sh "mvn install -DskipTests"
             }
             post {
                 success {
                     echo "Now its archiving"
-                
                 }
             }
         }
