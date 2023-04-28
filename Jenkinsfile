@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         maven "MAVEN3"
+        jdk "JAVA1.8"
     }
     stages {
         stage("Fetch code") {
