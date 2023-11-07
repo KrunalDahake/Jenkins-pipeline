@@ -1,0 +1,9 @@
+job url
+
+http://34.125.195.57:8080/job/build-job/build?token=mybuildtoken
+
+
+API token
+
+krunal123:
+
